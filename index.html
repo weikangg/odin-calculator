@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class = "title">Calculator</div>
+    <section>
+        <audio id = "audio" src = "audio/keyboard.mp3" style="display: none;"></audio>
+        <div class="calculator-grid">
+            <!-- We use 2 different kind of classes , the data attribute for the Javascript and the class attribute for the CSS.-->
+            <div class="output ">
+              <div data-previous-operand class="previous-operand"></div>
+              <div data-current-operand class="current-operand"></div>
+            </div>
+            <button data-all-clear class="span-two" id="clear">AC</button>
+            <button data-delete id="delete">DEL</button>
+            <button data-operation id = "divide">÷</button>
+            <button data-number id = "one">1</button>
+            <button data-number id = "two">2</button>
+            <button data-number id = "three">3</button>
+            <button data-operation id = "multiply">*</button>
+            <button data-number id = "four">4</button>
+            <button data-number id = "five">5</button>
+            <button data-number id = "six">6</button>
+            <button data-operation id = "add">+</button>
+            <button data-number id = "seven">7</button>
+            <button data-number id = "eight">8</button>
+            <button data-number id = "nine">9</button>
+            <button data-operation id = "minus">-</button>
+            <button data-number id = "decimal-point">.</button>
+            <button data-number id = "zero">0</button>
+            <button data-equals class="span-two" id = "equals">=</button>
+          </div>
+    </section>
+    <footer>
+        Wei Kang &copy; <script>document.write(new Date(). getFullYear())</script>
+    </footer>
+    <script src = "js/javscript.js" type="text/javascript" defer></script>    
+</body>
+</html>

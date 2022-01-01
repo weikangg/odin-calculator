@@ -1,0 +1,92 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body{
+    /* so that the background fills up the whole background */
+    padding:0;
+    margin:0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Quicksand", "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+    margin-top: 20px;
+}
+
+.calculator-grid{
+    display:grid;
+    justify-content: center;
+    /* align-content will try to align rows with respect to each other and the container. Align items will align items respective of each other instead. */ 
+    align-content: center;
+    /* To make the buttons always take up 100% of the screen */
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    /* at the minimum 120px but at the maximum we set it to auto so that it can grow to fit anything */
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+}
+
+/* Selects all the buttons inside the calculator grid class */
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.75);
+}
+
+.calculator-grid > button:hover{
+    background-color: rgba(255,255,255,0.9);
+}
+
+.span-two{
+    /* make AC and equal button to span two columns */
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0,0,0,0.75);
+    display:flex;
+    align-items: flex-end;
+    /* Justify-content: space between makes them as far apart as possible on the horizontal axis */
+    /* Space-around pushes the numbers a little further away from the top and pushes the number closer to each other */
+    justify-content: space-around;
+    /* Makes the numbers line up vertically instead of horizontally */
+    flex-direction: column;
+    padding: 10px;
+    /* Allows the long word to break and wrap to the next line */
+    word-wrap: break-word;
+    /* Allows the text to break at any character */
+    word-break: break-all;
+}
+
+.output .previous-operand{
+    color: rgba(255,255,255,0.75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: white;
+    font-size: 2.5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(99, 184, 184);
+}
