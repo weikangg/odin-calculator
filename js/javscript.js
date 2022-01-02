@@ -241,70 +241,7 @@ window.onkeydown = function(e){
             choice = document.querySelector("#decimal-point");
             choice.click();
             break;
+        default:
+            break;
     }
 }
-
-// let display = document.getElementById("display");
-// let buttons = Array.from(document.querySelectorAll("button"));
-
-// buttons.map(button => {
-//     button.addEventListener("click", (e) => {
-//         const audio = document.getElementById("audio")
-//         if (audio.paused){
-//             audio.play();
-//         }else{
-//             audio.currentTime = 0;
-//         }
-//         switch(e.target.innerText){
-//             case "C":
-//                 display.innerText = "";
-//                 break;
-//             case "←":
-//                 display.innerText = display.innerText.slice(0,-1);
-//                 break;
-//             case "=":
-//                 let len = display.innerText.length;
-//                 for (let i = 0;i<len;i++){
-//                     console.log(typeof(Number(display.innerText[i])));
-//                 }
-//                 break;
-//             default:
-//                 display.innerText += e.target.innerText;
-//         }
-//     });
-// });
-
-// function add(a,b){
-//     return a+b;
-// }
-
-// function subtract(a,b){
-//     return a-b;
-// }
-
-// function multiply(a,b){
-//     return a*b;
-// }
-
-// function divide(a,b){
-//     return a/b;
-// }
-
-// function operate(operator,a,b){
-//     if (operator === "+"){
-//         return add(a,b);
-//     }
-//     else if (operator === "-"){
-//         return subtract(a,b);
-//     }
-//     else if (operator === "*"){
-//         return multiply(a,b);
-//     }
-//     else if (operator === "+"){
-//         return divide(a,b);
-//     }
-//     else{
-//         return "Error!";
-//     }
-// }
-

@@ -8,7 +8,7 @@ body{
     /* so that the background fills up the whole background */
     padding:0;
     margin:0;
-    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    background: linear-gradient(to right, #cc2b5e , #753a88);
 }
 
 .title{
@@ -20,6 +20,7 @@ body{
     font-weight: bold;
     color: blue;
     margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .calculator-grid{
